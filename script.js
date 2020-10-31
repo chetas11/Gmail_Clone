@@ -39,7 +39,7 @@
         // }
 
         function execute() {
-            return gapi.client.gmail.users.messages.get({
+            return gapi.client.gmail.users.messages.list({
                 "userId": Id
             })
                 .then(function(response) {
