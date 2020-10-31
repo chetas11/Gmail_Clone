@@ -74,6 +74,10 @@
             }).then(function(response) {
                     CreateMail(response.snippet)
             },
+            function(err) { console.error("Execute error", err); });
+        }
+
+
   
 
         
