@@ -96,6 +96,13 @@
             gapi.auth2.init({client_id: "949258149932-60i8eajtnv5q35cl0amcn7q7qgpl6ihv.apps.googleusercontent.com"});
         });
 
+
+
+        let Searchbar = document.getElementById("search");
+        Searchbar.addEventListener("change", ()=>{
+            console.log(Searchbar.value)
+        })
+
         authenticate().then(loadClient)
 
         let Exec = document.getElementById("Exec")
