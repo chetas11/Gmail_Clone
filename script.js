@@ -65,7 +65,7 @@
 
         
         gapi.load("client:auth2", function() {
-            gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
+            gapi.auth2.init({client_id: "949258149932-60i8eajtnv5q35cl0amcn7q7qgpl6ihv.apps.googleusercontent.com"});
         });
 
         authenticate().then(loadClient)
