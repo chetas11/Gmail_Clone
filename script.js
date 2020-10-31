@@ -53,8 +53,8 @@
                 .then(function(response) {
                         for(let i=0; i<response.result.messages.length; i++){
                             CreateMail(response.result.messages[i])
-
                         }
+                        console.log(response.result.messages)
                     },
                 function(err) { console.error("Execute error", err); });
         }
