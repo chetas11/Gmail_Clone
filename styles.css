@@ -36,8 +36,8 @@ label {
   border-radius: 50px;
 }
 
-.nav {
-  background-color: white;
+.bg-light {
+  background-color: none;
 }
 
 .logo {
