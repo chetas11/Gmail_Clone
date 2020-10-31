@@ -23,8 +23,15 @@
                         function(err) { console.error("Execute error", err); });
             }
 
-        let SignOut = document.getElementById("signOut");
+          function loadClient() {
+            gapi.client.setApiKey("AIzaSyCL3tu8G68zXRgjJJQD55TXsGP6_ztlmVI");
+            return gapi.client.load("https://gmail.googleapis.com/$discovery/rest?version=v1")
+                .then(function() { console.log("GAPI client loaded for API"); },
+                    function(err) { console.error("Error loading GAPI client for API", err); });
+        }
 
+        let SignOut = document.getElementById("signOut");
+loadClient();
         getDetails();
 
         SignOut.addEventListener("click", ()=>{
