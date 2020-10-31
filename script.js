@@ -1,5 +1,5 @@
 
-        const DetailsDiv = document.getElementById("Details");
+        const Detailspara = document.getElementById("Details");
         
         
         function onSignIn(googleUser) {
