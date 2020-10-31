@@ -103,8 +103,9 @@
             InputText = Searchbar.value
         })
 
-
         
+
+
 
         authenticate().then(loadClient)
 
