@@ -55,6 +55,10 @@ label {
   height: 400px;
 }
 
+#labels .btn {
+  width: 100%;
+}
+
 #profile {
   width: 40px;
   border-radius: 50px;
