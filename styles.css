@@ -21,3 +21,7 @@
 .hide {
   display: none;
 }
+
+p {
+  width: 100%;
+}
