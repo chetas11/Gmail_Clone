@@ -36,7 +36,11 @@ label {
   border-radius: 50px;
 }
 
+.nav {
+  background-color: white;
+}
+
 .logo {
   display: inline;
-  width: 80px;
+  width: 100px;
 }
