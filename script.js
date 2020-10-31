@@ -71,10 +71,10 @@
         authenticate().then(loadClient)
 
         let SignOut = document.getElementById("signOut");
-        let getMails = document.getElementById("getMails");
+        let getMailBtn = document.getElementById("getMails");
 
 
-        getMails.addEventListener().addEventListener("click",()=>{
+        getMailBtn.addEventListener().addEventListener("click",()=>{
             getMails();
         })
 
