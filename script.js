@@ -50,18 +50,31 @@
         //             function(err) { console.error("Execute error", err); });
         // }
 
+
+        let messageid;
+
         function execute() {
             return gapi.client.gmail.users.messages.list({
                 "userId": Id
             })
                 .then(function(response) {
                         for(let i=0; i<response.result.messages.length; i++){
-                            CreateMail(window.atob(response.result.messages[i].id))
+                            messageid = response.result.messages[i].id
+                            LoadMsg(messageid)
                         }
-                        console.log(response.result.messages)
                     },
                 function(err) { console.error("Execute error", err); });
         }
+
+
+          function LoadMsg(messageid) {
+            return gapi.client.gmail.users.messages.get({
+            "userId": Id,
+            "id": messageid
+            }).then(function(response) {
+                    CreateMail(response.snippet)
+            },
+  
 
         
         gapi.load("client:auth2", function() {
@@ -76,6 +89,12 @@
         })
 
         let SignOut = document.getElementById("signOut");
+
+     function execute() {
+        gapi.client.gmail.users.messages.get({
+      "userId": "111490570980223679468",
+      "id": "1757ee4d4808f177"
+    })
 
 
         SignOut.addEventListener("click", ()=>{
