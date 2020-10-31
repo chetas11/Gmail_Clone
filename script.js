@@ -5,12 +5,12 @@
         
         let MainContainer = document.getElementById("main")
         let Inbox = document.getElementById("inbox")
-        let Buttons = document.getElementById("buttons")
+        let labels = document.getElementById("labels")
         let Nav = document.getElementById("nav")
         Nav.classList.remove("hide")
         MainContainer.classList.add("hide")
         Inbox.classList.remove("hide")
-        Buttons.classList.remove("hide")
+        labels.classList.remove("hide")
 
 
         let ProfilePic = document.getElementById("profile");
@@ -27,6 +27,12 @@
             Inbox.appendChild(SingleMail)
         }
 
+        function Createlabels(msg){
+            let SingleMail = document.createElement("p");
+            SingleMail.innerText = String(msg)
+            labels.appendChild(SingleMail)
+        }
+
         function authenticate() {
             return gapi.auth2.getAuthInstance()
                 .signIn({scope: "https://mail.google.com/ https://www.googleapis.com/auth/gmail.compose https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly"})
@@ -40,16 +46,18 @@
                     function(err) { console.error("Error loading GAPI client for API", err); });
         }
 
-        // function execute() {
-        //     return gapi.client.gmail.users.getProfile({
-        //     "userId": Id
-        //     })
-        //         .then(function(response) {
-        //                 // Handle the results here (response.result has the parsed body).
-        //                 console.log(response.result);
-        //             },
-        //             function(err) { console.error("Execute error", err); });
-        // }
+        function GetLabels() {
+            return gapi.client.gmail.users.labels.list({
+            "userId": Id
+            })
+                .then(function(response) {
+                        Createlabels(response.result.name)
+                        console.log("Response", response);
+                    },
+                    function(err) { console.error("Execute error", err); });
+        }
+
+        GetLabels();
 
 
         let messageid;
