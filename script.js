@@ -14,7 +14,7 @@
             try{
                 const response = await fetch("https://gmail.googleapis.com/gmail/v1/users/"+Id+"/profile?key=AIzaSyCL3tu8G68zXRgjJJQD55TXsGP6_ztlmVI")
                 const data = await response.json()
-                console.log(data.results.users.messages)
+                console.log(data)
             }catch(e){
                 console.log(e)
             }
