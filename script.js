@@ -1,11 +1,11 @@
 
-        const Detailspara = document.getElementById("Details");
+        let Detailspara = document.getElementById("Details");
         
         
         function onSignIn(googleUser) {
                 location.href = "inbox.html";
                 var profile = googleUser.getBasicProfile();
-                Detailspara.innerText = profile.id();
+                Detailspara.innerText = profile.getId();
                 console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
                 console.log('Name: ' + profile.getName());
                 console.log('Image URL: ' + profile.getImageUrl());
