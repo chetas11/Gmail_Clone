@@ -64,25 +64,24 @@
         }
 
         
-        // gapi.load("client:auth2", function() {
-        //     gapi.auth2.init({client_id: "949258149932-60i8eajtnv5q35cl0amcn7q7qgpl6ihv.apps.googleusercontent.com"});
-        // });
+        gapi.load("client:auth2", function() {
+            gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
+        });
 
         authenticate().then(loadClient)
 
-        let SignOut = document.getElementById("signOut");
-        let getMailBtn = document.getElementById("getMails");
-
-
-        getMailBtn.addEventListener().addEventListener("click",()=>{
-            execute();
+        let Exec = document.getElementById("Exec")
+        Exec.addEventListener("click", ()=>{
+            execute()
         })
+
+        let SignOut = document.getElementById("signOut");
+
 
         SignOut.addEventListener("click", ()=>{
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
             console.log('User signed out.');
-            location.href('index.html')
         });
 
         })
