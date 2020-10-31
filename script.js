@@ -13,6 +13,14 @@
         Inbox.classList.remove("hide")
         console.log(googleUser.wc.access_token)
 
+        function CreateMail(msg){
+            let SingleMail = document.createElement("p");
+            SingleMail.innerText = String(msg)
+            Inbox.appendChild(SingleMail)
+        }
+
+
+
 
         function authenticate() {
             return gapi.auth2.getAuthInstance()
@@ -43,8 +51,10 @@
                 "userId": Id
             })
                 .then(function(response) {
-                        // Handle the results here (response.result has the parsed body).
-                        console.log("Response", response);
+                        for(let i=0; i<response.result.messages.length; i++){
+                            CreateMail(response.result.messages[i])
+
+                        }
                     },
                 function(err) { console.error("Execute error", err); });
         }
