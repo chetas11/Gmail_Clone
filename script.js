@@ -10,7 +10,7 @@
         let MainContainer = document.getElementById("main")
         MainContainer.classList.add("hide")
         
-        console.log(googleUser)
+        console.log(googleUser.wc.access_token)
 
         const Fetcher = async () => {
             try{
