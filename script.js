@@ -27,16 +27,29 @@
                     function(err) { console.error("Error loading GAPI client for API", err); });
         }
 
+        // function execute() {
+        //     return gapi.client.gmail.users.getProfile({
+        //     "userId": Id
+        //     })
+        //         .then(function(response) {
+        //                 // Handle the results here (response.result has the parsed body).
+        //                 console.log(response.result);
+        //             },
+        //             function(err) { console.error("Execute error", err); });
+        // }
+
         function execute() {
-            return gapi.client.gmail.users.getProfile({
-            "userId": Id
+            return gapi.client.gmail.users.messages.get({
+                "userId": Id
             })
                 .then(function(response) {
                         // Handle the results here (response.result has the parsed body).
                         console.log("Response", response);
                     },
-                    function(err) { console.error("Execute error", err); });
+                function(err) { console.error("Execute error", err); });
         }
+
+        
         gapi.load("client:auth2", function() {
             gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
         });
@@ -44,8 +57,6 @@
         authenticate().then(loadClient)
 
         let Exec = document.getElementById("Exec")
-
-
         Exec.addEventListener("click", ()=>{
             execute()
         })
