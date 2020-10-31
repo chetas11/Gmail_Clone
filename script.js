@@ -69,14 +69,14 @@
         });
 
         authenticate().then(loadClient)
-        
-        document.body.addEventListener("load",()=>{
-            getMails();
-        })
-        
 
         let SignOut = document.getElementById("signOut");
+        let getMails = document.getElementById("getMails");
 
+
+        getMails.addEventListener().addEventListener("click",()=>{
+            getMails();
+        })
 
         SignOut.addEventListener("click", ()=>{
             var auth2 = gapi.auth2.getAuthInstance();
