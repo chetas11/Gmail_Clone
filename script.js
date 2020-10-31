@@ -6,6 +6,8 @@
         let MainContainer = document.getElementById("main")
         let Inbox = document.getElementById("inbox")
         let Buttons = document.getElementById("buttons")
+        let Nav = document.getElementById("nav")
+        Nav.classList.remove("hide")
         MainContainer.classList.add("hide")
         Inbox.classList.remove("hide")
         Buttons.classList.remove("hide")
