@@ -12,6 +12,7 @@
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize_button" style="display: none;">Authorize</button>
     <button id="signout_button" style="display: none;">Sign Out</button>
+    <button onclick="execute()">execute</button>
 
     <pre id="content" style="white-space: pre-wrap;"></pre>
 
@@ -122,6 +123,19 @@
                 }
             });
         }
+
+
+          function execute() {
+                return gapi.client.gmail.users.getProfile({})
+                    .then(function (response) {
+                        // Handle the results here (response.result has the parsed body).
+                        console.log("Response", response);
+                    },
+                        function (err) { console.error("Execute error", err); });
+            }
+            gapi.load("client:auth2", function () {
+                gapi.auth2.init({ client_id: "YOUR_CLIENT_ID" });
+            });
 
     </script>
 
