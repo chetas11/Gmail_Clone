@@ -31,7 +31,7 @@
         }
 
         let SignOut = document.getElementById("signOut");
-loadClient();
+        loadClient();
         getDetails();
 
         SignOut.addEventListener("click", ()=>{
