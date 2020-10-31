@@ -76,10 +76,6 @@
             },
             function(err) { console.error("Execute error", err); });
         }
-
-
-  
-
         
         gapi.load("client:auth2", function() {
             gapi.auth2.init({client_id: "949258149932-60i8eajtnv5q35cl0amcn7q7qgpl6ihv.apps.googleusercontent.com"});
@@ -93,13 +89,6 @@
         })
 
         let SignOut = document.getElementById("signOut");
-
-     function execute() {
-        gapi.client.gmail.users.messages.get({
-      "userId": "111490570980223679468",
-      "id": "1757ee4d4808f177"
-    })
-
 
         SignOut.addEventListener("click", ()=>{
             var auth2 = gapi.auth2.getAuthInstance();
