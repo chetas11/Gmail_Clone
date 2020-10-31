@@ -1,5 +1,5 @@
 
-        let Detailspara = document.getElementById("Details");
+        // let Detailspara = document.getElementById("Details");
         
         
         function onSignIn(googleUser) {
