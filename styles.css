@@ -25,3 +25,13 @@
 p {
   width: 100%;
 }
+
+img,
+label {
+  display: block;
+}
+
+img {
+  width: 500px;
+  border-radius: 50px;
+}
