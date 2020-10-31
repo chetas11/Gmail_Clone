@@ -10,25 +10,22 @@
         let MainContainer = document.getElementById("main")
         MainContainer.classList.add("hide")
         
-        let accessToken = googleUser.wc.access_token
+        console.log(googleUser.wc.access_token)
 
-        const Fetcher = async () => {
-            try{
-                const response = await fetch("https://gmail.googleapis.com/gmail/v1/users/"+Id+"/profile?key=let accessToken =AIzaSyCL3tu8G68zXRgjJJQD55TXsGP6_ztlmVI' \
-  --header 'Authorization: Bearer "+accessToken+"' \
-  --header 'Accept: application/json' \
-  --compressed")
-                const data = await response.json()
-                console.log(data)
-            }catch(e){
-                console.log(e)
+          function getDetails() {
+                return gapi.client.gmail.users.getProfile({
+                "userId": "111490570980223679468"
+                })
+                    .then(function(response) {
+                            // Handle the results here (response.result has the parsed body).
+                            console.log("Response", response);
+                        },
+                        function(err) { console.error("Execute error", err); });
             }
-        }
-
-
-        Fetcher();
 
         let SignOut = document.getElementById("signOut");
+
+        getDetails();
 
         SignOut.addEventListener("click", ()=>{
             var auth2 = gapi.auth2.getAuthInstance();
