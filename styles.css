@@ -46,7 +46,7 @@ label {
 #inbox {
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 800px;
+  height: 600px;
 }
 
 #labels {
