@@ -72,7 +72,8 @@
             "userId": Id,
             "id": messageid
             }).then(function(response) {
-                    CreateMail(response.snippet)
+                    CreateMail(response.result.snippet)
+                    console.log(response)
             },
             function(err) { console.error("Execute error", err); });
         }
