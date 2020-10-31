@@ -1,5 +1,5 @@
         
-        let ID;
+        let ID = 0;
 
         function onSignIn(googleUser) {
                 var profile = googleUser.getBasicProfile();
