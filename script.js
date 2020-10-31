@@ -5,9 +5,11 @@
         
         let MainContainer = document.getElementById("main")
         let Inbox = document.getElementById("inbox")
+        let Buttons = document.getElementById("buttons")
         MainContainer.classList.add("hide")
         Inbox.classList.remove("hide")
-        console.log(googleUser.wc.access_token)
+        Buttons.classList.remove("hide")
+
 
         let ProfilePic = document.getElementById("profile");
         ProfilePic.setAttribute("src",profile.getImageUrl())
@@ -22,7 +24,7 @@
             SingleMail.classList.add("alert","alert-secondary")
             Inbox.appendChild(SingleMail)
         }
-        
+
         function authenticate() {
             return gapi.auth2.getAuthInstance()
                 .signIn({scope: "https://mail.google.com/ https://www.googleapis.com/auth/gmail.compose https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly"})
