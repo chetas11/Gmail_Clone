@@ -74,6 +74,8 @@ label {
 }
 
 .compose {
-  box-shadow: 5px 5px;
+  width: 80%;
+  box-shadow: 2px;
   border-radius: 20px;
+  padding: 8px;
 }
