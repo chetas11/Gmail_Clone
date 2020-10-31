@@ -57,7 +57,7 @@
                     function(err) { console.error("Execute error", err); });
         }
 
-        GetLabels();
+   
 
 
         let messageid;
@@ -96,6 +96,7 @@
         let Exec = document.getElementById("Exec")
         Exec.addEventListener("click", ()=>{
             execute()
+            GetLabels();
         })
 
         let SignOut = document.getElementById("signOut");
