@@ -68,8 +68,8 @@
             gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
         });
 
-        authenticate().then(loadClient);
-        getMails();
+        authenticate().then(loadClient).then(getMails())
+        
 
         let SignOut = document.getElementById("signOut");
 
