@@ -31,7 +31,12 @@ label {
   display: block;
 }
 
-img {
-  width: 100px;
+#profile {
+  width: 40px;
   border-radius: 50px;
+}
+
+.logo {
+  display: inline;
+  width: 40px;
 }
