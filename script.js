@@ -10,7 +10,7 @@
         let MainContainer = document.getElementById("main")
         let Inbox = document.getElementById("inbox")
         MainContainer.classList.add("hide")
-        MainContainer.classList.remove("hide")
+        Inbox.classList.remove("hide")
         // console.log(googleUser.wc.access_token)
 
 
