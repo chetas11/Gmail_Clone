@@ -72,3 +72,8 @@ label {
   display: inline;
   width: 100px;
 }
+
+.compose {
+  box-shadow: 5px 10px;
+  border-radius: 20px;
+}
