@@ -50,7 +50,7 @@
         //             function(err) { console.error("Execute error", err); });
         // }
 
-        function getMails() {
+        function execute() {
             return gapi.client.gmail.users.messages.list({
                 "userId": Id
             })
@@ -75,7 +75,7 @@
 
 
         getMailBtn.addEventListener().addEventListener("click",()=>{
-            getMails();
+            execute();
         })
 
         SignOut.addEventListener("click", ()=>{
