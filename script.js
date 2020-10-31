@@ -46,12 +46,17 @@
                     function(err) { console.error("Error loading GAPI client for API", err); });
         }
 
+        let labelid;
+
         function GetLabels() {
             return gapi.client.gmail.users.labels.list({
             "userId": Id
             })
                 .then(function(response) {
-                        Createlabels(response.result.name)
+                    for(let i=0; i<response.result.labels.length; i++){
+                            labelid = response.result.labels[i].name
+                            Createlabels(labelid)
+                        }
                         console.log("Response", response);
                     },
                     function(err) { console.error("Execute error", err); });
