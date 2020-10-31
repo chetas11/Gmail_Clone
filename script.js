@@ -50,7 +50,7 @@
         //             function(err) { console.error("Execute error", err); });
         // }
 
-        function execute() {
+        function getMails() {
             return gapi.client.gmail.users.messages.list({
                 "userId": Id
             })
@@ -68,12 +68,8 @@
             gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
         });
 
-        authenticate().then(loadClient)
-
-        let Exec = document.getElementById("Exec")
-        Exec.addEventListener("click", ()=>{
-            execute()
-        })
+        authenticate().then(loadClient);
+        getMails();
 
         let SignOut = document.getElementById("signOut");
 
