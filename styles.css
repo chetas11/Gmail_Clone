@@ -44,7 +44,8 @@ label {
 }
 
 #inbox {
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 #profile {
