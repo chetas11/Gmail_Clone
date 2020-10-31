@@ -103,7 +103,25 @@
             InputText = Searchbar.value
         })
 
-        
+
+        function SearchMessages() {
+                return gapi.client.gmail.users.messages.list({
+                "userId": Id,
+                "q": InputText
+                })
+                    .then(function(response) {
+                    for(let i=0; i<response.result.messages.length; i++){
+                            messageid = response.result.messages[i].id
+                            LoadMsg(messageid)
+                        }
+                },
+                        function(err) { console.error("Execute error", err); });
+            }
+
+        let Search = document.getElementById("search-icon")
+        Search.addEventListener("click", ()=>{
+            SearchMessages();
+        })
 
 
 
