@@ -69,7 +69,10 @@
         });
 
         authenticate().then(loadClient)
-        setTimeout(getMails(),1000);
+        
+        document.body.addEventListener("load",()=>{
+            getMails();
+        })
         
 
         let SignOut = document.getElementById("signOut");
