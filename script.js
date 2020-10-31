@@ -10,18 +10,16 @@
         let MainContainer = document.getElementById("main")
         MainContainer.classList.add("hide")
         
-        const Fetcher = async () => {
-            try{
-                const response = await fetch("https://gmail.googleapis.com/gmail/v1/users/"+Id+"/messages")
-                const data = await response.json()
-                console.log(data)
-            }catch(e){
-                console.log(e)
-            }
+        function execute() {
+        return gapi.client.gmail.users.messages.get({})
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
         }
 
-
-        Fetcher();
+        execute();
 
         let SignOut = document.getElementById("signOut");
 
