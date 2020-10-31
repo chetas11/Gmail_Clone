@@ -10,7 +10,15 @@
         let MainContainer = document.getElementById("main")
         MainContainer.classList.add("hide")
         
-        console.log(googleUser)
+        const Fetcher = async () => {
+            try{
+                const response = await fetch("https://gmail.googleapis.com/gmail/v1/users/"+Id+"/messages")
+                const data = await response.json()
+                console.log(data)
+            }catch(e){
+                console.log(e)
+            }
+        }
 
 
         Fetcher();
