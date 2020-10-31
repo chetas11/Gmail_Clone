@@ -26,6 +26,11 @@
   display: none;
 }
 
+i {
+  color: grey;
+  margin-right: 7px;
+}
+
 p {
   width: 100%;
 }

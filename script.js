@@ -73,7 +73,7 @@
             "userId": Id,
             "id": messageid
             }).then(function(response) {
-                    CreateMail(response.result.payload.headers[21].value)
+                    CreateMail(response.result.snippet)
                     console.log(response)
             },
             function(err) { console.error("Execute error", err); });
