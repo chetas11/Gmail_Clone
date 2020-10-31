@@ -41,13 +41,10 @@
             gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
         });
 
+        authenticate().then(loadClient)
 
-        let Auth = document.getElementById("Auth")
         let Exec = document.getElementById("Exec")
 
-        Auth.addEventListener("click", ()=>{
-            authenticate().then(loadClient)
-        })
 
         Exec.addEventListener("click", ()=>{
             execute()
