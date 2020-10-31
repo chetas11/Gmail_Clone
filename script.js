@@ -56,7 +56,7 @@
             })
                 .then(function(response) {
                         for(let i=0; i<response.result.messages.length; i++){
-                            CreateMail(response.result.messages[i].id)
+                            CreateMail(window.atob(response.result.messages[i].id))
                         }
                         console.log(response.result.messages)
                     },
