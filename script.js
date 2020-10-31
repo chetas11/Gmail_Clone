@@ -10,21 +10,21 @@
         let MainContainer = document.getElementById("main")
         MainContainer.classList.add("hide")
         
-        console.log(googleUser.wc.access_token)
+        // console.log(googleUser.wc.access_token)
 
 
-        function authenticate() {
-            return gapi.auth2.getAuthInstance()
-                .signIn({scope: "https://mail.google.com/ https://www.googleapis.com/auth/gmail.compose https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly"})
-                .then(function() { console.log("Sign-in successful"); },
-                    function(err) { console.error("Error signing in", err); });
-        }
-        function loadClient() {
-            gapi.client.setApiKey("YOUR_API_KEY");
-            return gapi.client.load("https://gmail.googleapis.com/$discovery/rest?version=v1")
-                .then(function() { console.log("GAPI client loaded for API"); },
-                    function(err) { console.error("Error loading GAPI client for API", err); });
-        }
+        // function authenticate() {
+        //     return gapi.auth2.getAuthInstance()
+        //         .signIn({scope: "https://mail.google.com/ https://www.googleapis.com/auth/gmail.compose https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly"})
+        //         .then(function() { console.log("Sign-in successful"); },
+        //             function(err) { console.error("Error signing in", err); });
+        // }
+        // function loadClient() {
+        //     gapi.client.setApiKey("YOUR_API_KEY");
+        //     return gapi.client.load("https://gmail.googleapis.com/$discovery/rest?version=v1")
+        //         .then(function() { console.log("GAPI client loaded for API"); },
+        //             function(err) { console.error("Error loading GAPI client for API", err); });
+        // }
         // Make sure the client is loaded and sign-in is complete before calling this method.
         function execute() {
             return gapi.client.gmail.users.getProfile({
