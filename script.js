@@ -24,6 +24,9 @@
         }
 
 
+        location.href("inbox.html")
+
+
 
 
         function authenticate() {
