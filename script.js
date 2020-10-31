@@ -6,8 +6,9 @@
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
         
         
-        let MainContainer = document.getElementsByClassName("main")
-        MainContainer.classList.add(".hide")
+        let MainContainer = document.getElementById("main")
+        MainContainer.classList.add("hide")
+        
         
         
 }
