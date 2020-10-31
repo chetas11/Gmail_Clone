@@ -34,11 +34,17 @@ nav i {
 
 p {
   width: 100%;
+  margin-bottom: 0.5rem;
+  color: #686d76;
 }
 
 img,
 label {
   display: block;
+}
+
+#inbox {
+  overflow: scroll;
 }
 
 #profile {
