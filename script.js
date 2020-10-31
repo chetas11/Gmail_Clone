@@ -1,17 +1,20 @@
     function onSignIn(googleUser) {
         let profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         let Id = profile.getId();
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        
+    
         
         let MainContainer = document.getElementById("main")
         let Inbox = document.getElementById("inbox")
         MainContainer.classList.add("hide")
         Inbox.classList.remove("hide")
         console.log(googleUser.wc.access_token)
+
+        let ProfilePic = document.getElementById("profile");
+        ProfilePic.setAttribute("src",profile.getImageUrl())
+        let UserName = document.getElementById("Name")
+        UserName.innerText = profile.getName();
+        let Email = document.getElementById("email")
+        Email.innerText = profile.getEmail()
 
         function CreateMail(msg){
             let SingleMail = document.createElement("p");
