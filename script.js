@@ -120,6 +120,7 @@
 
         let Search = document.getElementById("search-icon")
         Search.addEventListener("click", ()=>{
+            Inbox.innerHTML = "";
             SearchMessages();
         })
 
