@@ -22,13 +22,7 @@
             SingleMail.classList.add("alert","alert-secondary")
             Inbox.appendChild(SingleMail)
         }
-
-
-        location.href("inbox.html")
-
-
-
-
+        
         function authenticate() {
             return gapi.auth2.getAuthInstance()
                 .signIn({scope: "https://mail.google.com/ https://www.googleapis.com/auth/gmail.compose https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.readonly"})
