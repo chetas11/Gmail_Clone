@@ -7,7 +7,7 @@
         
         
         let MainContainer = document.getElementsByClassName("main")
-        MainContainer.classList.add("hide")
+        MainContainer.classList.add(".hide")
         
         
 }
