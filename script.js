@@ -116,6 +116,14 @@
             InputText = Searchbar.value
         })
 
+        Searchbar.addEventListener("keyup", function(event) {
+            console.log(event)
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                SearchMessages();
+            }
+        });
+
 
         function SearchMessages() {
                 return gapi.client.gmail.users.messages.list({
