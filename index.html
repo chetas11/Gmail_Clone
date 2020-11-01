@@ -54,10 +54,41 @@
 
     </div>
     <div class="row">
+        <div class="modal fade" id="compose-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Compose</h4>
+      </div>
+      <form onsubmit="return sendEmail();">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="email" class="form-control" id="compose-to" placeholder="To" required />
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="compose-subject" placeholder="Subject" required />
+          </div>
+
+          <div class="form-group">
+            <textarea class="form-control" id="compose-message" placeholder="Message" rows="10" required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" id="send-button" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
         <div class="col-lg-2 col-md-2 text-center">
             <div id="labels" class="hide text-center">
             <button class="btn" id="Exec">Get Mails</button>
-            <button class="btn compose btn-light"><i class="fas fa-plus"></i> Compose</button>
+            <button href="#compose-modal" data-toggle="modal" id="compose-button" class="btn compose btn-light"><i class="fas fa-plus"></i> Compose</button>
             </div>
         </div>
         <div class="col-lg-10 col-md-10 col-sm-6">
@@ -73,7 +104,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
-
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://apis.google.com/js/api.js"></script>
         <script src="./script.js"></script>
