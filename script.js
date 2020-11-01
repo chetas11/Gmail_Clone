@@ -183,8 +183,8 @@
         })
 
 
-        let Form = document.getElementById("send-button")
-        Form.addEventListener("click", ()=>{
+        let SendMail = document.getElementById("send-button")
+        SendMail.addEventListener("click", ()=>{
             sendEmail();
         })
 
