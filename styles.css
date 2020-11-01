@@ -41,6 +41,14 @@ p {
   color: #686d76;
 }
 
+#inbox p:hover {
+  border: 5px solid #373a40;
+}
+
+#inbox p {
+  border: 0.1px 0px solid grey;
+}
+
 img,
 label {
   display: block;

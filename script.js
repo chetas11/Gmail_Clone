@@ -23,7 +23,6 @@
         function CreateMail(msg){
             let SingleMail = document.createElement("p");
             SingleMail.innerText = String(msg)
-            SingleMail.classList.add("alert","alert-secondary")
             Inbox.appendChild(SingleMail)
         }
 
