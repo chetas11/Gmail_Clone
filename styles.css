@@ -50,7 +50,6 @@ p {
 
 #inbox p:hover {
   border: 2px solid lightgray;
-  border-radius: 20px;
 }
 
 #inbox p {
@@ -77,13 +76,10 @@ label {
 
 #labels .btn {
   width: 100%;
-}
-
-.Labels {
   cursor: pointer;
 }
 
-.Labels:hover {
+#labels:hover {
   border: 2px solid lightgray;
 }
 
