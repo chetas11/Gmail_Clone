@@ -82,6 +82,7 @@
         let messageid;
 
         function LoadInbox(labelid) {
+            Inbox.innerHTML = "";
             return gapi.client.gmail.users.messages.list({
                 "userId": Id,
                 "labelIds": [
@@ -185,7 +186,6 @@
 
         let Exec = document.getElementById("Exec")
         Exec.addEventListener("click", ()=>{
-            Inbox.innerHTML = "";
             LoadInbox(Label)
             GetLabels();
         })
