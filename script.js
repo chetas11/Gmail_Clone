@@ -125,6 +125,7 @@
 
 
         function SearchMessages() {
+                Inbox.innerHTML = "";
                 return gapi.client.gmail.users.messages.list({
                 "userId": Id,
                 "q": InputText
@@ -140,7 +141,6 @@
 
         let Search = document.getElementById("search-icon")
         Search.addEventListener("click", ()=>{
-            Inbox.innerHTML = "";
             SearchMessages();
         })
 
