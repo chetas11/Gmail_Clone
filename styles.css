@@ -4,6 +4,7 @@
   border: 1px solid grey;
   padding: 50px;
   border-radius: 20px;
+  position: relative;
 }
 
 .form-control {
@@ -20,6 +21,7 @@
 .g-signin2 {
   margin-top: 30px;
   margin-left: 130px;
+  position: absolute;
 }
 
 .hide {
