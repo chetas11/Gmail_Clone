@@ -1,5 +1,6 @@
 body {
   background-image: url("./gmail_back.jpg");
+  background-repeat: no-repeat;
 }
 
 .main {
@@ -9,6 +10,7 @@ body {
   padding: 50px;
   border-radius: 20px;
   position: relative;
+  color: white;
 }
 
 .main p {
