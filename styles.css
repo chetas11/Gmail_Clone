@@ -29,6 +29,7 @@ body {
 .g-signin2 {
   margin-top: 20px;
   margin-left: 45%;
+  border-radius: 10px;
 }
 
 .hide {
