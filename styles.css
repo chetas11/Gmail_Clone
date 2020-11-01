@@ -46,7 +46,8 @@ p {
 }
 
 #inbox p {
-  border: 1px solid grey;
+  border-top: 0.5px solid grey;
+  border-bottom: 0.5px solid grey;
 }
 
 img,
