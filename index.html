@@ -12,7 +12,7 @@
 </head>
 <body>
         <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light hide">
-            <a class="navbar-brand" href="./index.html"><img class="img-fluid logo" src="./gmail-logo-512x512.png" alt=""></a>
+            <a class="navbar-brand" href="./index.html"><i class="fas fa-bars"></i><img class="img-fluid logo" src="./gmail-logo-512x512.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,10 +42,17 @@
             </div>
         </nav>
     <div id="main" class="container main text-center">
-        <h1><i class="fab fa-google"></i>mail</h1>
-        <h2>Sign in to your account</h2>
-        <div class="g-signin2" data-onsuccess="onSignIn">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6"></div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <h1><i class="fab fa-google"></i>mail</h1>
+                <h2>Sign in to your account</h2>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6"></div>
         </div>
+    </div>
+
     </div>
     <div class="row">
         <div class="col-lg-2 col-md-2 text-center">

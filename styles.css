@@ -5,6 +5,9 @@
   border: 1px solid grey;
   padding: 50px;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-control {
