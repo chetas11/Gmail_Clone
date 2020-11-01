@@ -45,7 +45,7 @@
                     function(err) { console.error("Error loading GAPI client for API", err); });
         }
 
-        let labelid;
+        let Label = "INBOX"
 
         function GetLabels() {
             return gapi.client.gmail.users.labels.list({
@@ -56,12 +56,27 @@
                             labelid = response.result.labels[i].name
                             Createlabels(labelid)
                         }
-                
+                    
+                        let AllLabel = document.querySelectorAll("p");
+                        AllLabel.forEach(currentLabel => {
+                            currentLabel.addEventListener("click", ()=>{
+                            if(currentLabel.innerText === "INBOX"){
+                               Label = "INBOX"
+                                LoadInbox(Label)
+                            }else if(currentLabel.innerText === "IMPORTANT"){
+                              Label = "IMPORTANT"
+                              LoadInbox(Label)
+                            }
+                            })
+
+                        });
                     },
                     function(err) { console.error("Execute error", err); });
 
         }
 
+
+      
 
 
         let messageid;
@@ -166,12 +181,12 @@
 
         authenticate().then(loadClient)
 
-        let LabelInbox = "INBOX"
+        
 
         let Exec = document.getElementById("Exec")
         Exec.addEventListener("click", ()=>{
             Inbox.innerHTML = "";
-            LoadInbox(LabelInbox)
+            LoadInbox(Label)
             GetLabels();
         })
 
