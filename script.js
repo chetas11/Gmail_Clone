@@ -58,11 +58,19 @@
                         }
                     
                         let AllLabel = document.querySelectorAll("p");
-                        console.log(AllLabel)
+                        AllLabel.forEach(Label => {
+                            if(Label.innerText === "INBOX"){
+                                InboxLabel();
+                            }else if(Label.innerText === "")
+                        });
                     },
                     function(err) { console.error("Execute error", err); });
 
         }
+
+
+
+        
 
    
 
@@ -73,7 +81,7 @@
             return gapi.client.gmail.users.messages.list({
                 "userId": Id,
                 "labelIds": [
-                    String(labelid)
+                    labelid
             ]
             })
                 .then(function(response) {
@@ -169,10 +177,12 @@
 
         authenticate().then(loadClient)
 
+        let LabelInbox = "INBOX"
+
         let Exec = document.getElementById("Exec")
         Exec.addEventListener("click", ()=>{
             Inbox.innerHTML = "";
-            LoadInbox(INBOX)
+            LoadInbox(LabelInbox)
             GetLabels();
         })
 
