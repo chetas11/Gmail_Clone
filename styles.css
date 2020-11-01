@@ -98,4 +98,11 @@ label {
     margin-top: 20px;
     margin-left: 35%;
   }
+
+  .main {
+    margin-top: 20%;
+    padding: 50px;
+    border: 0.5px solid grey;
+    border-radius: 20px;
+  }
 }

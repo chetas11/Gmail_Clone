@@ -170,6 +170,9 @@
             Inbox.innerHTML = "";
             LoadInbox()
             GetLabels();
+
+        let AllLabel = document.querySelectorAll("p");
+        console.log(AllLabel)
         })
 
 
@@ -188,13 +191,6 @@
 
         })
 
-        let AllLabel = document.querySelectorAll("p");
-
-        console.log(AllLabel)
-
-        AllLabel.forEach(Inbox_Label => {
-            console.log(Inbox_Label)  
-        });
 
         
         
