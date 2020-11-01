@@ -92,3 +92,10 @@ label {
   border-radius: 20px;
   padding: 8px;
 }
+
+@media screen and (max-width: 500px) {
+  .g-signin2 {
+    margin-top: 20px;
+    margin-left: 38%;
+  }
+}

@@ -86,7 +86,7 @@
             "id": messageid
             }).then(function(response) {
                     CreateMail(response.result.snippet)
-                    console.log(response)
+                    // console.log(response)
             },
             function(err) { console.error("Execute error", err); });
         }
