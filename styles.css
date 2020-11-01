@@ -113,4 +113,10 @@ label {
     border: 0.5px solid grey;
     border-radius: 20px;
   }
+
+  #inbox {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100px;
+  }
 }
