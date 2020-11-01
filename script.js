@@ -194,6 +194,7 @@
         let AllLabel = document.querySelectorAll("p");
 
         AllLabel.forEach(Inbox_Label => {
+            console.log(Inbox_Label)
             if(Inbox_Label.innerText === "INBOX"){
 
                 Inbox_Label.addEventListener("click",() => {
