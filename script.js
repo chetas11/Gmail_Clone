@@ -174,7 +174,7 @@
 
         let SendMail = document.getElementById("send-button")
         SendMail.addEventListener("click", ()=>{
-            sendEmail();
+            // sendEmail();
         })
 
         let SignOut = document.getElementById("signOut");
