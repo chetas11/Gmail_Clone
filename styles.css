@@ -114,7 +114,7 @@ label {
     border-radius: 20px;
   }
 
-  #inbox {
+  #labels {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 10px;
