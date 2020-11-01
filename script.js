@@ -134,7 +134,6 @@
                 'Subject': $('#compose-subject').val()
                 },
                 $('#compose-message').val(),
-                composeTidy
             );
 
             return false;
@@ -160,16 +159,6 @@
             }
 
 
-            function composeTidy()
-                {
-                $('#compose-modal').modal('hide');
-
-                $('#compose-to').val('');
-                $('#compose-subject').val('');
-                $('#compose-message').val('');
-
-                $('#send-button').removeClass('disabled');
-                }
 
 
 
