@@ -68,7 +68,10 @@
 
         function LoadInbox() {
             return gapi.client.gmail.users.messages.list({
-                "userId": Id
+                "userId": Id,
+                "labelIds": [
+                    "INBOX"
+            ]
             })
                 .then(function(response) {
                         for(let i=0; i<response.result.messages.length; i++){
@@ -83,13 +86,10 @@
           function LoadMsg(messageid) {
             return gapi.client.gmail.users.messages.get({
             "userId": Id,
-            "id": messageid,
-            "labelIds": [
-                    "INBOX"
-            ]
+            "id": messageid
             }).then(function(response) {
                     CreateMail(response.result.snippet)
-                    // console.log(response)
+                    console.log(response)
             },
             function(err) { console.error("Execute error", err); });
         }
