@@ -56,23 +56,12 @@
                             labelid = response.result.labels[i].name
                             Createlabels(labelid)
                         }
-                    
-                        let AllLabel = document.querySelectorAll("p");
-                        AllLabel.forEach(Label => {
-                            if(Label.innerText === "INBOX"){
-                                InboxLabel();
-                            }else if(Label.innerText === "")
-                        });
+                
                     },
                     function(err) { console.error("Execute error", err); });
 
         }
 
-
-
-        
-
-   
 
 
         let messageid;
