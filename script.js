@@ -56,8 +56,12 @@
                             labelid = response.result.labels[i].name
                             Createlabels(labelid)
                         }
+                    
+                        let AllLabel = document.querySelectorAll("p");
+                        console.log(AllLabel)
                     },
                     function(err) { console.error("Execute error", err); });
+
         }
 
    
@@ -170,9 +174,6 @@
             Inbox.innerHTML = "";
             LoadInbox()
             GetLabels();
-
-        let AllLabel = document.querySelectorAll("p");
-        console.log(AllLabel)
         })
 
 
