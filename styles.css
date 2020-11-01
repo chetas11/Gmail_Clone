@@ -108,7 +108,7 @@ label {
   }
 
   .main {
-    margin-top: 20%;
+    margin-top: 40%;
     padding: 50px;
     border: 0.5px solid grey;
     border-radius: 20px;
@@ -117,6 +117,6 @@ label {
   #labels {
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 10px;
+    height: 100px;
   }
 }
