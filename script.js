@@ -118,7 +118,7 @@
 
         Searchbar.addEventListener("keyup", function(event) {
             console.log(event)
-            if (event.keyCode === 13) {
+            if (event.code === "Enter") {
                 event.preventDefault();
                 SearchMessages();
             }
