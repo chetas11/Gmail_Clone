@@ -83,7 +83,10 @@
           function LoadMsg(messageid) {
             return gapi.client.gmail.users.messages.get({
             "userId": Id,
-            "id": messageid
+            "id": messageid,
+            "labelIds": [
+                    "INBOX"
+            ]
             }).then(function(response) {
                     CreateMail(response.result.snippet)
                     // console.log(response)
