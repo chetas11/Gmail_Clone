@@ -41,7 +41,7 @@
         function loadClient() {
             gapi.client.setApiKey("AIzaSyCL3tu8G68zXRgjJJQD55TXsGP6_ztlmVI");
             return gapi.client.load("https://gmail.googleapis.com/$discovery/rest?version=v1")
-                .then(function() { console.log("GAPI client loaded for API"); },
+                .then(function() {  },
                     function(err) { console.error("Error loading GAPI client for API", err); });
         }
 
@@ -56,7 +56,6 @@
                             labelid = response.result.labels[i].name
                             Createlabels(labelid)
                         }
-                        console.log("Response", response);
                     },
                     function(err) { console.error("Execute error", err); });
         }
@@ -89,7 +88,6 @@
             "id": messageid
             }).then(function(response) {
                     CreateMail(response.result.snippet)
-                    console.log(response)
             },
             function(err) { console.error("Execute error", err); });
         }
@@ -185,7 +183,6 @@
         SignOut.addEventListener("click", ()=>{
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
-            console.log('User signed out.');
             location.reload();
         });
 
@@ -194,14 +191,7 @@
         let AllLabel = document.querySelectorAll("p");
 
         AllLabel.forEach(Inbox_Label => {
-            console.log(Inbox_Label)
-            if(Inbox_Label.innerText === "INBOX"){
-
-                Inbox_Label.addEventListener("click",() => {
-                LoadInbox();
-                console.log(Inbox_Label)
-                })
-            }    
+            console.log(Inbox_Label)  
         });
 
         
