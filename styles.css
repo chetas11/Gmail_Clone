@@ -1,3 +1,7 @@
+body {
+  background-image: url("./gmail_back.jpg");
+}
+
 .main {
   margin-top: 30vh;
   width: auto;
@@ -5,14 +9,13 @@
   padding: 50px;
   border-radius: 20px;
   position: relative;
-  background-image: url("./gmail_back.jpg");
 }
 
 .main p {
   margin-top: 20px;
 }
 
-.main p {
+body img {
   opacity: 0.5;
 }
 
