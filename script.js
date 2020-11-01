@@ -182,6 +182,12 @@
             GetLabels();
         })
 
+
+        let Form = document.getElementById("form")
+        Form.addEventListener("submit", ()=>{
+            sendEmail();
+        })
+
         let SignOut = document.getElementById("signOut");
 
         SignOut.addEventListener("click", ()=>{
