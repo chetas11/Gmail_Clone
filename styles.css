@@ -1,6 +1,6 @@
 body {
   background-image: url("./gmail_back.jpg");
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
 }
 
 .main {
@@ -13,10 +13,7 @@ body {
 
 .main p {
   margin-top: 20px;
-}
-
-body img {
-  opacity: 0.5;
+  color: black;
 }
 
 .form-control {
