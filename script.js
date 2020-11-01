@@ -172,7 +172,7 @@
         let Exec = document.getElementById("Exec")
         Exec.addEventListener("click", ()=>{
             Inbox.innerHTML = "";
-            LoadInbox()
+            LoadInbox(INBOX)
             GetLabels();
         })
 
