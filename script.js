@@ -69,11 +69,11 @@
 
         let messageid;
 
-        function LoadInbox() {
+        function LoadInbox(labelid) {
             return gapi.client.gmail.users.messages.list({
                 "userId": Id,
                 "labelIds": [
-                    "INBOX"
+                    String(labelid)
             ]
             })
                 .then(function(response) {
