@@ -47,9 +47,9 @@ p {
   padding: 0.5%;
 }
 
-/* #inbox p:hover {
+#inbox p:hover {
   border: 2px solid lightgray;
-} */
+}
 
 #inbox p {
   border-top: 0.5px solid #eeeeee;
@@ -81,9 +81,9 @@ label {
   cursor: pointer;
 }
 
-/* .Labels:hover {
+.Labels:hover {
   border: 2px solid lightgray;
-} */
+}
 
 #profile {
   width: 40px;
