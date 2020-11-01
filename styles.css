@@ -1,7 +1,7 @@
 .main {
   margin-top: 30vh;
   padding: 50px;
-  border-radius: 20px;
+  border: 0.5px solid grey;
   border-radius: 20px;
   overflow: auto;
 }
