@@ -128,12 +128,12 @@
 
         authenticate().then(loadClient)
 
-        let Exec = document.getElementById("Exec")
-        Exec.addEventListener("click", ()=>{
-            Inbox.innerHTML = "";
-            execute()
-            GetLabels();
-        })
+        // let Exec = document.getElementById("Exec")
+        // Exec.addEventListener("click", ()=>{
+        //     Inbox.innerHTML = "";
+        //     execute()
+        //     GetLabels();
+        // })
 
         let SignOut = document.getElementById("signOut");
 
