@@ -1,9 +1,8 @@
 .main {
   margin-top: 30vh;
-  width: auto;
   padding: 50px;
   border-radius: 20px;
-  position: relative;
+  border-radius: 20px;
 }
 
 .main p {
