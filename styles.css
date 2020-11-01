@@ -39,15 +39,16 @@ p {
   width: 100%;
   margin-bottom: 0.5rem;
   color: #686d76;
+  padding: 1%;
 }
 
 #inbox p:hover {
-  border: 2px solid #373a40;
+  border: 2px solid lightgray;
 }
 
 #inbox p {
-  border-top: 0.5px solid grey;
-  border-bottom: 0.5px solid grey;
+  border-top: 0.5px solid #eeeeee;
+  border-bottom: 0.5px solid #eeeeee;
 }
 
 img,
