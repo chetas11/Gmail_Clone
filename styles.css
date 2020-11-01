@@ -1,3 +1,8 @@
+body {
+  background-color: #f3f0f5;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+
 .main {
   margin-top: 10%;
   padding: 50px;
