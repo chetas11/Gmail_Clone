@@ -3,7 +3,7 @@
   padding: 50px;
   border: 0.5px solid grey;
   border-radius: 20px;
-  overflow: auto;
+  overflow: -moz-hidden-unscrollable;
 }
 
 .main p {
