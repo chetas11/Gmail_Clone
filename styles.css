@@ -121,6 +121,6 @@ label {
   }
 
   .top-icon {
-    display: none;
+    display: hidden;
   }
 }
