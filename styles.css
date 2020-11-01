@@ -6,11 +6,9 @@ body {
 .main {
   margin-top: 30vh;
   width: auto;
-  border: 1px solid grey;
   padding: 50px;
   border-radius: 20px;
   position: relative;
-  color: white;
 }
 
 .main p {
