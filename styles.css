@@ -1,11 +1,11 @@
-/* .main {
+.main {
   margin-top: 100px;
-  width: 500px;
-  height: 500px;
+  /* width: 500px;
+  height: 500px; */
   border: 1px solid grey;
   padding: 50px;
   border-radius: 20px;
-} */
+}
 
 .form-control {
   width: 70%;
