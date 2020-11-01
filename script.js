@@ -177,7 +177,7 @@
 
         let SendMail = document.getElementById("send-button")
         SendMail.addEventListener("click", ()=>{
-            // sendEmail();
+            sendEmail();
         })
 
         let SignOut = document.getElementById("signOut");
@@ -190,6 +190,18 @@
         });
 
         })
+
+        let AllLabel = document.querySelectorAll("p");
+
+        AllLabel.forEach(Inbox_Label => {
+            if(Inbox_Label.innerText === "INBOX"){
+
+                Inbox_Label.addEventListener("click",() => {
+                LoadInbox();
+                console.log(Inbox_Label)
+                })
+            }    
+        });
 
         
         
