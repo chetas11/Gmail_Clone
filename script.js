@@ -22,7 +22,7 @@
 
         function CreateMail(msg){
             let SingleMail = document.createElement("p");
-            SingleMail.innerText = String(msg).substring(0.50);
+            SingleMail.innerText = String(msg).substr(0,50);
             Inbox.appendChild(SingleMail)
         }
 
