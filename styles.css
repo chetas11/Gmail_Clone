@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.main p {
+  margin-top: 20px;
+}
+
 .form-control {
   width: 70%;
   margin-right: 50px;
