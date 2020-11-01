@@ -27,9 +27,10 @@
         }
 
         function Createlabels(msg){
-            let SingleMail = document.createElement("p");
-            SingleMail.innerText = String(msg)
-            labels.appendChild(SingleMail)
+            let SingleLabel = document.createElement("p");
+            SingleLabel.innerText = String(msg)
+            SingleLabel.classList.add("Labels")
+            labels.appendChild(SingleLabel)
         }
 
         function authenticate() {
@@ -60,13 +61,8 @@
                         let AllLabel = document.querySelectorAll("p");
                         AllLabel.forEach(currentLabel => {
                             currentLabel.addEventListener("click", ()=>{
-                            if(currentLabel.innerText === "INBOX"){
-                               Label = "INBOX"
+                               Label = currentLabel.innerText
                                 LoadInbox(Label)
-                            }else if(currentLabel.innerText === "IMPORTANT"){
-                              Label = "IMPORTANT"
-                              LoadInbox(Label)
-                            }
                             })
 
                         });

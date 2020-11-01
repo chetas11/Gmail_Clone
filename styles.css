@@ -72,6 +72,14 @@ label {
   width: 100%;
 }
 
+.Labels {
+  cursor: pointer;
+}
+
+.Labels:hover {
+  border: 2px solid lightgray;
+}
+
 #profile {
   width: 40px;
   border-radius: 50px;
