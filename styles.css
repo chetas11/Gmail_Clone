@@ -119,4 +119,8 @@ label {
     overflow-y: scroll;
     height: 150px;
   }
+
+  .top-icon {
+    display: none;
+  }
 }
