@@ -14,6 +14,16 @@ i {
   color: #1a73e8;
 }
 
+#search-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.search-bar {
+  position: relative;
+}
+
 h1 {
   color: #222831;
   font-weight: bolder;
@@ -54,7 +64,6 @@ h1 {
 nav i {
   color: grey;
   margin-right: 10px;
-  position: absolute;
 }
 
 p {
