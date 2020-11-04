@@ -12,19 +12,21 @@
 </head>
 <body>
         <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light hide">
-            <a class="navbar-brand" href="./index.html"><i class="fas fa-bars top-icon"></i><img class="img-fluid logo" src="./gmail-logo-512x512.png" alt=""></a>
+            <a class="navbar-brand" href="./index.html"></i><img class="img-fluid logo" src="./gmail-logo-512x512.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="search-bar col-lg-7 col-md-7 col-sm-6"><input id="search" class="form-control mr-sm-2" type="search" placeholder="Search mail" aria-label="Search"><i
-                id="search-icon" class="fas fa-search"></i></div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <i class="far fa-2x fa-question-circle ml-5"></i>
+            <div class="search-bar col-lg-7 col-md-6 col-sm-6">
+                <input id="search" class="form-control " type="search" placeholder="Search mail" aria-label="Search"><i
+                id="search-icon" class="fas fa-search"></i>
+            </div>
+            <div class="collapse navbar-collapse right" id="navbarSupportedContent">
+                <i class="far fa-2x fa-question-circle"></i>
                 <i class="fas fa-2x fa-cog"></i>
                 <i class="fas fa-2x fa-th"></i>
 
-                <form class="form-inline my-2 my-lg-0">
+                <form class="form-inline my-2 my-lg-0 user-img">
                     <img class="img-fluid" id="profile" src="">
                 </form>
                 <ul class="navbar-nav mr-auto">
@@ -33,8 +35,8 @@
                         aria-haspopup="true" aria-expanded="false">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <label id="Name" for="Name"></label>
-                        <label id="email" for="email"></label>
+                        <p class="text-dark" id="Name" for="Name"></p>
+                        <p class="text-dark" id="email" for="email"></p>
                         <div class="dropdown-divider"></div>
                         <button class="btn btn-light" id="signOut">Sign Out</button>
                     </div>
@@ -87,13 +89,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-2 text-center">
+        <div class="col-lg-2 col-md-2 col-sm-1 text-center">
             <div id="labels" class="hide text-center">
-            <button class="btn" id="Exec">Get Mails</button>
-            <a href="#compose-modal" data-toggle="modal" id="compose-button" class="btn btn-primary pull-right hidden"><i class="fas fa-plus"></i> Compose</a>
+                <button class="btn" id="Exec">Get Mails</button>
+                <a href="#compose-modal" data-toggle="modal" id="compose-button" class="btn btn-primary pull-right hidden"><i class="fas compose-icon fa-plus"></i> Compose</a>
+            </div>
         </div>
-        </div>
-        <div class="col-lg-10 col-md-10 col-sm-6">
+        <div class="col-lg-10 col-md-10 col-sm-4">
             <div id="inbox">
             </div>
         </div>
