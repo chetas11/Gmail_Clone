@@ -1,6 +1,7 @@
 body {
   background-color: white;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  color: #686d76;
 }
 
 .main {
@@ -73,8 +74,15 @@ nav i {
 p {
   width: 100%;
   margin: 0.5rem 0px;
-  color: #686d76;
   padding: 0.5%;
+}
+
+.btn {
+  border-radius: 0%;
+}
+
+.nightmode {
+  color: whitesmoke;
 }
 
 #inbox p:hover {
