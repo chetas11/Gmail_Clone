@@ -54,6 +54,7 @@ h1 {
 nav i {
   color: grey;
   margin-right: 10px;
+  position: absolute;
 }
 
 p {
