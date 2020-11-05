@@ -81,8 +81,8 @@ p {
   border-radius: 0%;
 }
 
-.nightmode {
-  color: whitesmoke;
+#night-mode {
+  cursor: pointer;
 }
 
 #inbox p:hover {

@@ -145,16 +145,20 @@
         })
 
 
+        let TOEmail = document.getElementById("compose-to")
+        let EmailSubject = document.getElementById("compose-subject")
+        let EmailMsg = document.getElementById("compose-message")
+
+
+
         function sendEmail()
             {
-            $('#send-button').addClass('disabled');
-
             sendMessage(
                 {
-                'To': $('#compose-to').val(),
-                'Subject': $('#compose-subject').val()
+                'To': TOEmail.value,
+                'Subject': EmailSubject.value
                 },
-                $('#compose-message').val(),
+                EmailMsg.value,
             );
 
             return false;
@@ -166,7 +170,6 @@
 
             for(var header in headers_obj)
                 email += header += ": "+headers_obj[header]+"\r\n";
-
                 email += "\r\n" + message;
 
             var sendRequest = gapi.client.gmail.users.messages.send({
@@ -187,7 +190,7 @@
 
         
 
-        let Exec = document.getElementById("Exec")
+        let Exec = document.getElementById("GetMail")
         Exec.addEventListener("click", ()=>{
             LoadInbox(Label)
             GetLabels();
