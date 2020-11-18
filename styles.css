@@ -11,6 +11,10 @@ body {
   border-radius: 20px;
 }
 
+.mails {
+  cursor: pointer;
+}
+
 #search {
   width: 100%;
 }

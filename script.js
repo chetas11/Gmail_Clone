@@ -22,8 +22,13 @@
 
         function CreateMail(msg){
             let SingleMail = document.createElement("p");
+            SingleMail.classList.add("mails")
             SingleMail.innerText = String(msg).substr(0,150);
             Inbox.appendChild(SingleMail)
+
+            SingleMail.addEventListener("click", ()=>{
+                alert("clicked")
+            })
         }
 
         function Createlabels(msg){
@@ -97,9 +102,10 @@
 
           function LoadMsg(messageid) {
             return gapi.client.gmail.users.messages.get({
-            "userId": Id,
+            "userId": Id,   
             "id": messageid
             }).then(function(response) {
+                    console.log(response.result.payload.body.data)
                     CreateMail(response.result.snippet)
             },
             function(err) { console.error("Execute error", err); });
