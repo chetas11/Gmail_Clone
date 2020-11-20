@@ -103,9 +103,15 @@
           function LoadMsg(messageid) {
             return gapi.client.gmail.users.messages.get({
             "userId": Id,   
-            "id": messageid
+            "id": messageid,
+            "format": "raw"
             }).then(function(response) {
-                    console.log(response.result.payload.body.data)
+                    // if(response.result.payload.parts[0].body.data){
+                    //     let raw = response.result.payload.parts[0].body.data
+                    //     console.log(raw);
+                    // }
+                    
+                    console.log(response.result.snippet)
                     CreateMail(response.result.snippet)
             },
             function(err) { console.error("Execute error", err); });
