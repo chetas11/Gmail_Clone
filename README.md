@@ -1,6 +1,8 @@
 # Gmail_Clone
 
-#### Description: clone of gmail website using the gmail api you can 
+#### Description: Clone of gmail website using the gmail api
+
+#### What can you do - 
 - fetch all your the mails
 - search mails
 - compose mails and send to anyone.
