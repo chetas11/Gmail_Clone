@@ -1,6 +1,10 @@
 # Gmail_Clone
--
-#### Description: clone of mail using the gmail api you can fetch all the mails and search mails and also compose mails and send to anyone.
+
+#### Description: clone of gmail website using the gmail api you can 
+- fetch all your the mails
+- search mails
+- compose mails and send to anyone.
+- get all the mails according to labels you specified
 
 #### Check out the working example: https://gmail-clone-chetanbirmole.netlify.app
 
